@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Daily Herald – E-Newspaper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- =================== TOP BAR =================== -->
+  <div id="topbar">
+    <div class="container tb-inner">
+      <span id="live-date">Loading date...</span>
+      <span>
+        <a href="#">Subscribe</a>
+        <a href="#">E-Edition</a>
+        <a href="#">Sign In</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- =================== MASTHEAD =================== -->
+  <header id="masthead">
+    <div class="container">
+      <div class="masthead-edition">Est. 2025 · Digital First Edition</div>
+      <div class="masthead-name">The Daily <span>Herald</span></div>
+      <div class="masthead-tagline">"Truth. Clarity. Courage."</div>
+    </div>
+  </header>
+
+  <!-- =================== NAV =================== -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <button class="ham" id="ham-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="#" class="nav-link active" data-target="home">🏠 Home</a></li>
+        <li><a href="#" class="nav-link" data-target="bulletin">📋 Bulletin</a></li>
+        <li><a href="#" class="nav-link" data-target="about">ℹ️ About</a></li>
+        <li><a href="#" class="nav-link" data-target="contact">✉️ Contact</a></li>
+      </ul>
+      <div class="nav-search">
+        <input type="text" placeholder="Search news…" id="search-input"/>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== TICKER =================== -->
+  <div id="ticker">
+    <div class="container ticker-inner">
+      <span class="ticker-label">BREAKING</span>
+      <div class="ticker-track" id="ticker-track">
+        <!-- duplicated for seamless loop -->
+        <span>Global climate summit reaches new agreement</span>
+        <span>Tech giant announces AI-powered healthcare tools</span>
+        <span>Stock markets surge on positive economic data</span>
+        <span>Scientists discover new exoplanet in habitable zone</span>
+        <span>National sports team qualifies for World Cup</span>
+        <span>Parliament passes landmark education reform bill</span>
+        <span>Global climate summit reaches new agreement</span>
+        <span>Tech giant announces AI-powered healthcare tools</span>
+        <span>Stock markets surge on positive economic data</span>
+        <span>Scientists discover new exoplanet in habitable zone</span>
+        <span>National sports team qualifies for World Cup</span>
+        <span>Parliament passes landmark education reform bill</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== MAIN CONTENT =================== -->
+  <main>
+
+    <!-- ====== HOME PAGE ====== -->
+    <section id="home" class="page-section active">
+      <div class="container">
+
+        <!-- Hero -->
+        <div class="hero-grid fade-in">
+          <div class="hero-main">
+            <span class="tag">Top Story</span>
+            <h1>World Leaders Gather for Historic Climate Summit in Geneva</h1>
+            <p class="lead">
+              Over 190 nations have signed the landmark "Geneva Accord", pledging to cut carbon emissions by 60% before 2040. Experts call it the most ambitious environmental treaty in modern history.
+            </p>
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Climate Summit" class="hero-image" style="margin-bottom:16px;">
+            <div class="byline">By <strong>Anjali Mehta</strong> · April 15, 2026 · World Affairs</div>
+          </div>
+          <div class="hero-sidebar">
+            <div class="hero-side-item" onclick="openModal('Technology', 'AI Breaks New Ground in Medical Diagnosis', 'Researchers at MIT have developed an AI system capable of detecting rare diseases from routine blood tests with 98.7% accuracy — far surpassing the current standard of care.', 'Dr. Priya Nair', 'April 15, 2026')">
+              <span class="tag">Technology</span>
+              <h3>AI Breaks New Ground in Medical Diagnosis</h3>
+              <p>MIT researchers report 98.7% accuracy in rare disease detection from blood tests.</p>
+            </div>
+            <div class="hero-side-item" onclick="openModal('Economy', 'India GDP Growth Outpaces Global Average', 'India\'s economy expanded 8.2% in the last fiscal quarter, making it the fastest-growing major economy, driven by manufacturing and digital exports.', 'Rajesh Kumar', 'April 15, 2026')">
+              <span class="tag">Economy</span>
+              <h3>India GDP Growth Outpaces Global Average</h3>
+              <p>8.2% expansion driven by manufacturing and digital exports.</p>
+            </div>
+            <div class="hero-side-item" onclick="openModal('Sports', 'India Qualifies for FIFA World Cup 2026', 'In a stunning comeback, the Indian national football team secured a World Cup berth with a 2-1 victory over South Korea, igniting celebrations across the country.', 'Vikas Sharma', 'April 14, 2026')">
+              <span class="tag">Sports</span>
+              <h3>India Qualifies for FIFA World Cup 2026</h3>
+              <p>A historic victory over South Korea seals the berth after decades.</p>
+            </div>
+            <div class="hero-side-item" onclick="openModal('Science', 'New Planet Discovered in Habitable Zone', 'NASA\'s James Webb telescope has identified an Earth-like exoplanet just 12 light-years away, showing signs of liquid water on its surface.', 'Dr. Ananya Singh', 'April 13, 2026')">
+              <span class="tag">Science</span>
+              <h3>New Planet Found in Habitable Zone 12 Light-Years Away</h3>
+              <p>James Webb telescope detects signs of liquid water on exoplanet surface.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider"/>
+
+        <!-- Latest News Grid -->
+        <h2 class="section-title">Latest News</h2>
+        <div class="news-grid fade-in">
+
+          <div class="news-card" onclick="openModal('Politics', 'Parliament Passes Landmark Education Reform', 'The Education Reform Act 2026 introduces free higher education for students from low-income families, universal digital literacy programs, and teacher salary increases of 35%.', 'Meera Joshi', 'April 15, 2026')">
+            <img src="assets/Pentagon.webp" alt="Politics"/>
+            <div class="news-card-body">
+              <span class="tag">Politics</span>
+              <h3>Parliament Passes Landmark Education Reform Act</h3>
+              <p>Free higher education for low-income families and 35% teacher salary hike included.</p>
+              <div class="byline">Meera Joshi · April 15, 2026</div>
+            </div>
+          </div>
+
+          <div class="news-card" onclick="openModal('Technology', 'Smartphone Makers Race to Fold', 'The foldable smartphone market has exploded in 2026, with five major manufacturers launching sub-$500 devices. Analysts predict foldables will outsell traditional smartphones by 2028.', 'Arjun Patel', 'April 15, 2026')">
+            <img src="https://images.unsplash.com/photo-1523475496153-3197d2e3d8fd?w=600&q=80" alt="Tech"/>
+            <div class="news-card-body">
+              <span class="tag">Technology</span>
+              <h3>Foldable Phones Now Cheaper Than Ever – The $400 Revolution</h3>
+              <p>Five brands launch sub-$500 foldables as the category goes mainstream.</p>
+              <div class="byline">Arjun Patel · April 15, 2026</div>
+            </div>
+          </div>
+
+          <div class="news-card" onclick="openModal('Health', 'WHO Declares Malaria Elimination Milestone', 'The World Health Organization has declared 25 countries malaria-free as of 2026, crediting widespread use of new mRNA-based vaccines and advanced mosquito-suppression technologies.', 'Dr. Fatima Ali', 'April 14, 2026')">
+            <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?w=600&q=80" alt="Health"/>
+            <div class="news-card-body">
+              <span class="tag">Health</span>
+              <h3>WHO Declares 25 Countries Malaria-Free in Historic Milestone</h3>
+              <p>mRNA vaccines and mosquito suppression credited for the sweeping victory.</p>
+              <div class="byline">Dr. Fatima Ali · April 14, 2026</div>
+            </div>
+          </div>
+
+          <div class="news-card" onclick="openModal('Culture', 'Cannes Film Festival Opens with Indian Blockbuster', 'For the first time, an Indian film opens the Cannes Film Festival. Director Zoya Akhtar\'s \'Monsoon\' has already received five standing ovations and is tipped for the Palme d\'Or.', 'Priyanka Rao', 'April 14, 2026')">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="Culture"/>
+            <div class="news-card-body">
+              <span class="tag">Culture</span>
+              <h3>Indian Film Opens Cannes for the First Time in Festival History</h3>
+              <p>Director Zoya Akhtar's 'Monsoon' receives five standing ovations at premiere.</p>
+              <div class="byline">Priyanka Rao · April 14, 2026</div>
+            </div>
+          </div>
+
+          <div class="news-card" onclick="openModal('Business', 'Electric Vehicle Sales Cross 50% Market Share', 'For the first time, electric vehicles account for more than half of all new car sales globally in Q1 2026. Battery prices have fallen 70% in five years, making EVs cheaper than petrol cars.', 'Siddharth Nair', 'April 13, 2026')">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="Business"/>
+            <div class="news-card-body">
+              <span class="tag">Business</span>
+              <h3>EVs Claim 50% of Global Car Sales for the First Time</h3>
+              <p>Battery cost collapse drives electric vehicles past the tipping point.</p>
+              <div class="byline">Siddharth Nair · April 13, 2026</div>
+            </div>
+          </div>
+
+          <div class="news-card" onclick="openModal('Environment', 'Amazon Reforestation Hits 10 Million Hectares', 'A coalition of NGOs, governments and tech companies has successfully replanted over 10 million hectares of Amazon rainforest using drone-seeding and AI-guided irrigation systems.', 'Lucia Fernandez', 'April 12, 2026')">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Environment"/>
+            <div class="news-card-body">
+              <span class="tag">Environment</span>
+              <h3>Amazon Reforestation Reaches 10 Million Hectare Milestone</h3>
+              <p>Drones, AI irrigation, and international partnerships drive restoration effort.</p>
+              <div class="byline">Lucia Fernandez · April 12, 2026</div>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="divider"/>
+
+        <!-- Opinion Section -->
+        <h2 class="section-title">Opinion & Analysis</h2>
+        <div class="opinion-row fade-in">
+          <div class="opinion-col">
+            <span class="tag">Editorial</span>
+            <blockquote>"Democracy is not a destination — it is a daily practice that demands every citizen's participation."</blockquote>
+            <div class="opinion-author">— Ravi Shankar, Editor-in-Chief</div>
+          </div>
+          <div class="opinion-col">
+            <span class="tag">Column</span>
+            <blockquote>"AI will not replace journalists. But journalists who use AI will replace those who don't."</blockquote>
+            <div class="opinion-author">— Nisha Kapoor, Tech Correspondent</div>
+          </div>
+          <div class="opinion-col">
+            <span class="tag">Analysis</span>
+            <blockquote>"The green energy transition is the largest economic opportunity of the 21st century — and we are only at its beginning."</blockquote>
+            <div class="opinion-author">— Prof. Arun Desai, Economist</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== BULLETIN PAGE ====== -->
+    <section id="bulletin" class="page-section">
+      <div class="container">
+        <h2 class="section-title">📋 Daily Bulletin</h2>
+        <p style="color:var(--mid-gray);margin-bottom:30px;font-size:0.95rem;">Today's curated roundup of the most important stories across all categories.</p>
+
+        <div class="bulletin-layout fade-in">
+
+          <!-- Feed -->
+          <div class="bulletin-feed">
+
+            <div class="bulletin-item" onclick="openModal('Top Story', 'Geneva Accord Signed by 190 Nations', 'World leaders have signed the most ambitious climate treaty to date. The Geneva Accord requires all signatory nations to achieve net-zero emissions no later than 2045, with interim targets checked every five years by an independent UN body.', 'Anjali Mehta', 'April 15, 2026')">
+              <div class="bulletin-item-num">01</div>
+              <div class="bulletin-item-body">
+                <span class="tag">World</span>
+                <h3>Geneva Accord Signed by 190 Nations — The Road to Net Zero</h3>
+                <p>The most ambitious climate treaty in history sets binding 2045 net-zero targets with independent UN oversight.</p>
+                <div class="meta">Anjali Mehta · April 15, 2026 · 3 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="openModal('India', 'Lucknow Metro Phase 3 Inaugurated', 'The third phase of the Lucknow Metro extends the network to 50 new stations, connecting the outer suburbs to the city centre and reducing average commute time by 40 minutes.', 'Amar Singh', 'April 15, 2026')">
+              <div class="bulletin-item-num">02</div>
+              <div class="bulletin-item-body">
+                <span class="tag">India</span>
+                <h3>Lucknow Metro Phase 3 Inaugurated — 50 New Stations Added</h3>
+                <p>The expanded network cuts commute times and connects outer suburbs, serving an estimated 8 lakh daily passengers.</p>
+                <div class="meta">Amar Singh · April 15, 2026 · 2 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="openModal('Economy', 'RBI Cuts Repo Rate to 5.5%', 'The Reserve Bank of India has cut the repo rate by 25 basis points to 5.5%, aiming to boost consumer spending and infrastructure investment ahead of the Union Budget review.', 'Kavita Iyer', 'April 15, 2026')">
+              <div class="bulletin-item-num">03</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Economy</span>
+                <h3>RBI Cuts Repo Rate to 5.5% to Stimulate Growth</h3>
+                <p>A 25 bps cut is expected to lower home loan rates and encourage infrastructure spending across key sectors.</p>
+                <div class="meta">Kavita Iyer · April 15, 2026 · 2 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="openModal('Sports', 'IPL 2026: Mumbai Indians vs. CSK Tonight', 'The marquee clash of IPL 2026 begins at 7:30 PM today. Mumbai Indians lead the points table while CSK are unbeaten in their last six matches — analysts call it the tie of the season.', 'Rohit Desai', 'April 15, 2026')">
+              <div class="bulletin-item-num">04</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Sports</span>
+                <h3>IPL 2026: MI vs. CSK Showdown Tonight — Preview & Predictions</h3>
+                <p>A match that will define the top of the table. CSK are unbeaten in six; MI are the form team. Kick-off 7:30 PM.</p>
+                <div class="meta">Rohit Desai · April 15, 2026 · 4 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="openModal('Education', 'CBSE Class 12 Results Announced', 'CBSE has released Class 12 results for 2026. The overall pass percentage stands at 91.4%, the highest in five years, with girls outperforming boys for the eighth consecutive year.', 'Sunita Rao', 'April 15, 2026')">
+              <div class="bulletin-item-num">05</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Education</span>
+                <h3>CBSE Class 12 Results: 91.4% Pass Rate — Highest in Five Years</h3>
+                <p>Girls outperform boys for the eighth consecutive year. Results available on cbse.gov.in from today morning.</p>
+                <div class="meta">Sunita Rao · April 15, 2026 · 2 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="openModal('Technology', 'ISRO Launches Chandrayaan-4 Successfully', 'ISRO\'s Chandrayaan-4 lifted off from Sriharikota at 09:45 AM. The mission aims to return lunar soil samples to Earth, a first for India, and is expected to reach lunar orbit in 28 days.', 'Dr. Vikram Nair', 'April 14, 2026')">
+              <div class="bulletin-item-num">06</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Technology</span>
+                <h3>ISRO's Chandrayaan-4 Lifts Off Successfully — Sample Return Mission</h3>
+                <p>India's most ambitious lunar mission is underway. Lunar orbit insertion expected in 28 days; soil samples return in 180 days.</p>
+                <div class="meta">Dr. Vikram Nair · April 14, 2026 · 5 min read</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="bulletin-sidebar">
+
+            <!-- Weather -->
+            <div class="sidebar-box">
+              <div class="sidebar-box-title">🌤 Today's Weather</div>
+              <div class="sidebar-box-body">
+                <div class="weather-widget">
+                  <div class="weather-icon">🌤️</div>
+                  <div class="weather-info">
+                    <div class="city">Lucknow, UP</div>
+                    <div class="temp">34°C · Partly Cloudy · Humidity 62%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trending -->
+            <div class="sidebar-box">
+              <div class="sidebar-box-title">🔥 Trending Now</div>
+              <div class="sidebar-box-body">
+                <div class="sidebar-news-item" onclick="openModal('Trending', 'Viral Video: Street Dog Saves Child in Jaipur', 'A street dog in Jaipur alerted passersby to a toddler who had wandered near a busy road, preventing a potential accident. The video has been viewed 40 million times across social platforms.', 'Staff Reporter', 'April 15, 2026')">
+                  <h4>Viral: Street Dog Saves Child in Jaipur — 40M Views</h4>
+                  <span>April 15, 2026</span>
+                </div>
+                <div class="sidebar-news-item" onclick="openModal('Entertainment', 'Bollywood Star Alia Bhatt Wins National Film Award', 'Alia Bhatt has been awarded the National Film Award for Best Actress for her performance in the critically acclaimed drama \'Antar\'. This is her second National Award.', 'Entertainment Desk', 'April 15, 2026')">
+                  <h4>Alia Bhatt Wins National Film Award for Best Actress</h4>
+                  <span>April 15, 2026</span>
+                </div>
+                <div class="sidebar-news-item" onclick="openModal('Science', 'New Cancer Vaccine Shows 90% Efficacy in Trials', 'A personalized mRNA cancer vaccine developed jointly by BioNTech and AIIMS has shown 90% efficacy in Phase 3 trials targeting pancreatic and lung cancers.', 'Health Desk', 'April 14, 2026')">
+                  <h4>New Cancer Vaccine Shows 90% Efficacy in Phase 3 Trials</h4>
+                  <span>April 14, 2026</span>
+                </div>
+                <div class="sidebar-news-item" onclick="openModal('Business', 'Mukesh Ambani Announces 1 Lakh New Jobs', 'Reliance Industries Chairman Mukesh Ambani has announced plans to hire 1 lakh employees over the next two years across Jio, Retail, and its new Green Energy division.', 'Business Desk', 'April 13, 2026')">
+                  <h4>Reliance to Hire 1 Lakh Employees in Green Energy Push</h4>
+                  <span>April 13, 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Numbers -->
+            <div class="sidebar-box">
+              <div class="sidebar-box-title">📊 Today's Numbers</div>
+              <div class="sidebar-box-body" style="font-family:var(--font-ui);font-size:0.83rem;">
+                <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span>SENSEX</span><strong style="color:green">▲ 78,420</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span>NIFTY 50</span><strong style="color:green">▲ 23,714</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span>USD / INR</span><strong>₹ 83.42</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span>Gold / 10g</span><strong>₹ 73,210</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:8px 0"><span>Crude Oil</span><strong style="color:red">▼ $81.30</strong></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT PAGE ====== -->
+    <section id="about" class="page-section">
+      <div class="container">
+        <div class="about-hero fade-in">
+          <h2>India's <em>Most Trusted</em><br/>Digital Newspaper</h2>
+          <p>The Daily Herald delivers bold, independent journalism to millions of readers across India and the world. Founded in 2025 as a digital-first publication, we believe truth belongs to everyone.</p>
+        </div>
+        <h2 class="section-title">Why The Daily Herald?</h2>
+        <div class="about-grid fade-in">
+          <div class="about-card">
+            <div class="icon">📰</div>
+            <h3>Independent Reporting</h3>
+            <p>We are independently owned and editorially free. No corporate or political pressure shapes our coverage.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">🌏</div>
+            <h3>Global Coverage</h3>
+            <p>From Lucknow to London, our correspondents are on the ground covering stories that matter to you.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">⚡</div>
+            <h3>Real-Time Updates</h3>
+            <p>Breaking news the moment it happens, with verified facts before we publish — speed without sacrificing accuracy.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">🔒</div>
+            <h3>Reader Privacy</h3>
+            <p>We collect only what is necessary and never sell your data. Your trust is our most valuable asset.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">📱</div>
+            <h3>Mobile Friendly</h3>
+            <p>Perfectly optimized for every screen — phone, tablet, or desktop — so you never miss a story.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">🎓</div>
+            <h3>Student Project</h3>
+            <p>Built as a final-year academic project, this site demonstrates modern web development and digital journalism best practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT PAGE ====== -->
+    <section id="contact" class="page-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-layout fade-in">
+
+          <div class="contact-info">
+            <h2>We'd Love to Hear From You</h2>
+            <p>Have a tip, a story idea, feedback, or just want to say hello? Reach out to our team using any of the channels below or fill in the form.</p>
+            <div class="contact-detail">
+              <span class="ci">📍</span>
+              <div><strong>Address</strong>The Daily Herald, Press House, Hazratganj, Lucknow — 226001, Uttar Pradesh, India</div>
+            </div>
+            <div class="contact-detail">
+              <span class="ci">📞</span>
+              <div><strong>Phone</strong>+91 522 000 0000</div>
+            </div>
+            <div class="contact-detail">
+              <span class="ci">✉️</span>
+              <div><strong>Email</strong>editor@thedailyherald.in</div>
+            </div>
+            <div class="contact-detail">
+              <span class="ci">🕐</span>
+              <div><strong>Office Hours</strong>Mon – Sat: 9 AM – 6 PM IST</div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="e.g. Priya Sharma"/>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com"/>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select>
+                <option>General Enquiry</option>
+                <option>News Tip</option>
+                <option>Advertise With Us</option>
+                <option>Press Release</option>
+                <option>Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Write your message here…"></textarea>
+            </div>
+            <button class="btn" onclick="alert('Thank you! Your message has been sent.')">Send Message</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="name">The Daily <span>Herald</span></div>
+          <p>India's leading digital-first newspaper. Committed to truth, independence, and clarity since 2025. Serving readers across 40 cities.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="#" onclick="navigate('home')">Home</a></li>
+            <li><a href="#" onclick="navigate('bulletin')">Bulletin</a></li>
+            <li><a href="#" onclick="navigate('about')">About</a></li>
+            <li><a href="#" onclick="navigate('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#">World</a></li>
+            <li><a href="#">India</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 The Daily Herald · All Rights Reserved</span>
+        <span>Privacy Policy · Terms of Use · Sitemap</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================== ARTICLE MODAL =================== -->
+  <div id="modal-overlay" onclick="closeModalOutside(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-header">
+        <span class="tag" id="modal-tag">Tag</span>
+        <h2 id="modal-title">Title</h2>
+        <div class="byline" id="modal-byline">Author · Date</div>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Content here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== JAVASCRIPT =================== -->
+  <script>
+
+    // ── Live Date ──────────────────────────────────────────
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const days   = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const now    = new Date();
+    document.getElementById('live-date').textContent =
+      days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+
+    // ── Navigation ─────────────────────────────────────────
+    function navigate(target) {
+      // Hide all sections
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      // Show target
+      const el = document.getElementById(target);
+      if (el) { el.classList.add('active'); }
+      // Update nav links
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.target === target);
+      });
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Close mobile menu
+      document.getElementById('nav-menu').classList.remove('open');
+    }
+
+    // Nav link click listeners
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        navigate(this.dataset.target);
+      });
+    });
+
+    // Footer links
+    function navigate(target) {
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      const el = document.getElementById(target);
+      if (el) el.classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.target === target);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── Mobile Hamburger ───────────────────────────────────
+    document.getElementById('ham-btn').addEventListener('click', function() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+
+    // ── Article Modal ──────────────────────────────────────
+    function openModal(tag, title, body, author, date) {
+      document.getElementById('modal-tag').textContent    = tag;
+      document.getElementById('modal-title').textContent  = title;
+      document.getElementById('modal-byline').innerHTML   = 'By <strong>' + author + '</strong> &middot; ' + date;
+      document.getElementById('modal-body').innerHTML     = '<p>' + body + '</p>'
+        + '<p style="color:var(--mid-gray);font-size:0.85rem;font-style:italic;margin-top:20px;">This is a sample article for demonstration purposes. In a real deployment, the full article content would be fetched from a database or CMS.</p>';
+      document.getElementById('modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOutside(e) {
+      if (e.target === document.getElementById('modal-overlay')) closeModal();
+    }
+
+    // Keyboard close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // ── Simple Search ──────────────────────────────────────
+    document.getElementById('search-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && this.value.trim()) {
+        alert('Searching for: "' + this.value.trim() + '"\n\n(Connect a search backend to enable live results.)');
+        this.value = '';
+      }
+    });
+
+  </script>
+</body>
+</html>
