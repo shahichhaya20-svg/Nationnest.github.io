@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" contentjustify-content="width=device-width, initial-scale=1.0"/>
+  <title>The Nation Nest E-Newspaper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!--  TOP BAR  -->
+  <div id="topbar">
+    <div class="container tb-inner">
+      <span id="live-date">Loading date...</span>
+    </div>
+  </div>
+
+  <!--  MASTHEAD  -->
+  <header id="masthead">
+    <div class="container">
+      <div class="masthead-edition">Est. 2025 · Digital First Edition</div>
+      <div class="masthead-name">Nation <span>Nest</span></div>
+      <div class="masthead-tagline">"Truth. Clarity. Courage."</div>
+    </div>
+  </header>
+
+  <!--  NAV  -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <button class="ham" id="ham-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="nav-link" data-target="home"><img src="assets/home.png" width="22px" height="22px" style="margin-left: 5px;">Home</a></li>
+        <li><a href="bulletin.html" class="nav-link" data-target="bulletin"><img src="assets/bulletin.png" width="22px" height="22px" style="margin-left: 20px;">Bulletin</a></li>
+        <li><a href="about.html" class="nav-link" data-target="about"><img src="assets/icon.png" width="22px" height="22px" style="margin-left: 15px;"> About</a></li>
+        <li><a href="contact.html" class="nav-link active" data-target="contact"><img src="assets/email.png" width="23px" height="23px" style="margin-left: 20px;" >Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--  TICKER  -->
+  <div id="ticker">
+    <div class="container ticker-inner">
+      <span class="ticker-label">BREAKING</span>
+      <div class="ticker-track" id="ticker-track">
+        <!-- duplicated for seamless loop -->
+        <span>Global climate summit reaches new agreement</span>
+        <span>Tech giant announces AI-powered healthcare tools</span>
+        <span>Stock markets surge on positive economic data</span>
+        <span>Scentists discover new exoplanet in habitable zone</span>
+        <span>National sports team qualifies for World Cup</span>
+        <span>Parliaent passes landmark education reform bill</span>
+        <span>Global climate summit reaches new agreement</span>
+        <span>Tech giant announces AI-powered healthcare tools</span>
+        <span>Stock markets surge on positive economic data</span>
+        <span>Scentists discover new exoplanet in habitable zone</span>
+        <span>National sports team qualifies for World Cup</span>
+        <span>Parliaent passes landmark education reform bill</span>
+      </div>
+    </div>
+  </div>
+<!--  CONTACT PAGE  -->
+    <section id="contact" >
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-layout fade-in">
+
+          <div class="contact-info">
+            <h2>We'd Love to Hear From You</h2>
+            <p>Have a tip, a story idea, feedback, or just want to say hello? Reach out to our team using any of the channels below or fill in the form.</p>
+            <div class="contact-detail">
+              <span class="ci"><img src="assets/location.png" style="width: 27px; height: 27px;"></span>
+              <div><strong>Address</strong>Nation Nest, Gorakhpur, Uttar Pradesh, India</div>
+            </div>
+            <div class="contact-detail">
+              <span class="ci"><img src="assets/call.png" style="width: 27px; height: 27px;"></span>
+              <div><strong>Phone</strong>+91 74887 63952</div>
+            </div>
+            <div class="contact-detail">
+              <span class="ci">✉️</span>
+              <div><strong>Email</strong>editor@thedailyherald.in</div>
+            </div>
+            <div class="contact-detail">
+              <span class="ci"></span>
+              <div><strong>Office Hours</strong>Mon – Sat: 9 AM – 6 PM IST</div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="e.g. Priya Sharma"/>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com"/>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select>
+                <option>eneralenquiry</option>
+                <option>News Tip</option>
+                <option>Advertise With Us</option>
+                <option>Press Release</option>
+                <option>Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Write your message here…"></textarea>
+            </div>
+            <button class="btn" onclick="alert('Thank you! Your message has ben ent.')">end Message</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+<!--  FOOTER  -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="name">Nation <span>Nest</span></div>
+          <p>India's New digital-first newspaper. Committed to truth, indeence, and clarity since 2025. </p>
+        </div>
+        <div class="footer-col">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="bulletin.html" >Bulletin</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="world.html">World</a></li>
+            <li><a href="#" class="nav-link" data-target="india">India</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://x.com/nest_natio40446">Twitter / X</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nation Nest · All Rights Reserved</span>
+        <span style="margin-left: 50%;" ><a href="privacy_policy.html">Privacy Policy & Terms of Use</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!--  ARTICLE MODAL  -->
+  <div id="modal-overlay" onclick="closeModalOutside(eent)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-header">
+        <span class="tag" id="modal-tag">Tag</span>
+        <h2 id="modal-title">Title</h2>
+        <div class="byline" id="modal-byline">Author · Date</div>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>contentjustify-content here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--  JAVASCRIPT  -->
+  <script>
+
+    // ── Live Date ─
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const days   = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const now    = new Date();
+    document.getElementById('live-date').textContent =
+      days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+
+    // ── Navigation 
+    function navigate(target) {
+      // Hide all sections
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      // Show target
+      const el = document.getElementById(target);
+      if (el) { el.classList.add('active'); }
+      // Update nav links
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.target === target);
+      });
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Close mobile menu
+      document.getElementById('nav-menu').classList.remove('open');
+    }
+
+    // Nav link click listeners
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href !== '#') return;
+        e.preventDefault();
+        navigate(this.dataset.target);
+      });
+    });
+
+    // Footer links
+    function navigate(target) {
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      const el = document.getElementById(target);
+      if (el) el.classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.target === target);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── Mobile Hamburger ──
+    document.getElementById('ham-btn').addEventListener('click', function() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+
+  </script>
+</body>
+</html>

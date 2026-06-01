@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" contentjustify-content="width=device-width, initial-scale=1.0"/>
+  <title>The Nation Nest E-Newspaper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:wght@300;400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!--  TOP BAR  -->
+  <div id="topbar">
+    <div class="container tb-inner">
+      <span id="live-date">Loading date...</span>
+    </div>
+  </div>
+
+  <!--  MASTHEAD  -->
+  <header id="masthead">
+    <div class="container">
+      <div class="masthead-edition">Est. 2025 · Digital First Edition</div>
+      <div class="masthead-name">Nation <span>Nest</span></div>
+      <div class="masthead-tagline">"Truth. Clarity. Courage."</div>
+    </div>
+  </header>
+
+  <!--  NAV  -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <button class="ham" id="ham-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="nav-link" data-target="home"><img src="assets/home.png" width="22px" height="22px" style="margin-left: 5px;">Home</a></li>
+        <li><a href="bulletin.html" class="nav-link active" data-target="bulletin"><img src="assets/bulletin.png" width="22px" height="22px" style="margin-left: 20px;">Bulletin</a></li>
+        <li><a href="about.html" class="nav-link" data-target="about"><img src="assets/icon.png" width="22px" height="22px" style="margin-left: 15px;"> About</a></li>
+        <li><a href="contact.html" class="nav-link" data-target="contact"><img src="assets/email.png" width="23px" height="23px" style="margin-left: 20px;" >Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--  TICKER  -->
+  <div id="ticker">
+    <div class="container ticker-inner">
+      <span class="ticker-label">BREAKING</span>
+      <div class="ticker-track" id="ticker-track">
+        <span>Global climate summit reaches new agreement</span>
+        <span>Tech giant announces AI-powered healthcare tools</span>
+        <span>Stock markets surge on positive economic data</span>
+        <span>Scentists discover new exoplanet in habitable zone</span>
+        <span>National sports team qualifies for World Cup</span>
+        <span>Parliaent passes landmark education reform bill</span>
+        <span>Global climate summit reaches new agreement</span>
+        <span>Tech giant announces AI-powered healthcare tools</span>
+        <span>Stock markets surge on positive economic data</span>
+        <span>Scentists discover new exoplanet in habitable zone</span>
+        <span>National sports team qualifies for World Cup</span>
+        <span>Parliaent passes landmark education reform bill</span>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--  BULLETIN PAGE  -->
+    <section id="bulletin" >
+      <div class="container">
+        <h2 class="section-title">📋 Daily Bulletin</h2>
+        <p style="color:var(--mid-gray);margin-bottom:30px;font-size:0.95rem;">Today's curated roundup of the most important stories across all categories.</p>
+
+        <div class="bulletin-layout fade-in">
+
+          <!-- Feed -->
+          <div class="bulletin-feed">
+
+            <div class="bulletin-item" onclick="OpenModal('Top Story', 'eneva Accord Signed by 190 Nations', 'World leaders have signed the most ambitious climate treaty to date. The eneva Accord requires all signatory nations to achieve net-zero emissions no later than 2045, with interim targets checked every five years by an indeent UN body.', 'Anjali Mehta', 'April 15, 2026')">
+              <div class="bulletin-item-num">01</div>
+              <div class="bulletin-item-body">
+                <span class="tag">World</span>
+                <h3>Geneva Accord Signed by 190 Nations — The Road to Net Zero</h3>
+                <p>The most ambitious climate treaty in history sets binding 2045 net-zero targets with indeent UN oversight.</p>
+                <div class="meta">Anjali Mehta · April 15, 2026 · 3 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="OpenModal('India', 'Lucknow Metro Phase 3 Inaugurated', 'The third phase of the Lucknow Metro exends the network to 50 new stations, connecting the outer suburbs to the city entre and reducing average commute time by 40 minutes.', 'Amar Singh', 'April 15, 2026')">
+              <div class="bulletin-item-num">02</div>
+              <div class="bulletin-item-body">
+                <span class="tag">India</span>
+                <h3>Lucknow Metro Phase 3 Inaugurated — 50 New Stations Added</h3>
+                <p>The expanded network cuts commute times and connects outer suburbs, serving an estimated 8 lakh daily pasengers.</p>
+                <div class="meta">Amar Singh · April 15, 2026 · 2 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="OpenModal('Economy', 'RBI Cuts Repo Rate to 5.5%', 'The Reserve Bank of India has cut the repo rate by 25 basis points to 5.5%, aiming to boost consumer sending and infrastructure investent ahead of the Union Budget review.', 'Kavita Iyer', 'April 15, 2026')">
+              <div class="bulletin-item-num">03</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Economy</span>
+                <h3>RBI Cuts Repo Rate to 5.5% to Stimulate Growth</h3>
+                <p>A 25 bps cut is expected to lower home loan rates andencourage infrastructure sending across key sectors.</p>
+                <div class="meta">Kavita Iyer · April 15, 2026 · 2 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="OpenModal('Sports', 'IPL 2026: Mumbai Indians vs. CSK Tonight', 'The marquee clash of IPL 2026 begins at 7:30 PM today. Mumbai Indians lead the points table while CSK are unbeaen in their last six matches — analysts call it the tie of the season.', 'Rohit Desai', 'April 15, 2026')">
+              <div class="bulletin-item-num">04</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Sports</span>
+                <h3>IPL 2026: MI vs. CSK Showdown Tonight — Preview & Predictions</h3>
+                <p>A match that will define the top of the table. CSK are unbeaen in six; MI are the form team. Kick-off 7:30 PM.</p>
+                <div class="meta">Rohit Desai · April 15, 2026 · 4 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="OpenModal('Education', 'CBSE Class 12 Results Announced', 'CBSE has released Class 12 results for 2026. The overall pass perentage stands at 91.4%, the highest in five years, with girls outperforming boys for the eighth consecutive year.', 'Sunita Rao', 'April 15, 2026')">
+              <div class="bulletin-item-num">05</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Education</span>
+                <h3>CBSE Class 12 Results: 91.4% Pass Rate — Highest in Five Years</h3>
+                <p>Girls outperform boys for the eighth consecutive year. Results available on cbse.gov.in from today morning.</p>
+                <div class="meta">Sunita Rao · April 15, 2026 · 2 min read</div>
+              </div>
+            </div>
+
+            <div class="bulletin-item" onclick="OpenModal('Technology', 'ISRO Launches Chandrayaan-4 Successfully', 'ISRO\'s Chandrayaan-4 lifted off from Sriharikota at 09:45 AM. The mission aims to return lunar soil samples to Earth, a first for India, and is expected to reach lunar orbit in 28 days.', 'Dr. Vikram Nair', 'April 14, 2026')">
+              <div class="bulletin-item-num">06</div>
+              <div class="bulletin-item-body">
+                <span class="tag">Technology</span>
+                <h3>ISRO's Chandrayaan-4 Lifts Off Successfully — Sample Return Mission</h3>
+                <p>India's most ambitious lunar mission is underway. Lunar orbit insertion expected in 28 days; soil samples return in 180 days.</p>
+                <div class="meta">Dr. Vikram Nair · April 14, 2026 · 5 min read</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="bulletin-sidebar">
+
+          <!-- Weather -->
+            <div class="sidebar-box">
+              <div class="sidebar-box-title">🌤 Weather Update</div>
+              <div class="sidebar-box-body">
+                <div class="weather-widget">
+                  <div class="weather-icon"></div>
+                  <div class="weather-info">
+                    <div class="city">Lucknow, UP</div>
+                    <div class="temp">34°C · Partly Cloudy · Humidity 62%</div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+            <!-- Tending -->
+            <div class="sidebar-box">
+              <div class="sidebar-box-title">🔥 Tending Now</div>
+              <div class="sidebar-box-body">
+                <div class="sidebar-news-item" onclick="OpenModal('Tending', 'Viral Video: Street Dog Saves Child in Jaipur', 'A street dog in Jaipur alerted passersby to a toddler who had wandered near a busy road, preenting a poential accient. The video has ben viewed 40 million times across social platforms.', 'Staff Reporter', 'April 15, 2026')">
+                  <h4>Viral: Street Dog Saves Child in Jaipur — 40M Views</h4>
+                  <span>April 15, 2026</span>
+                </div>
+                <div class="sidebar-news-item" onclick="OpenModal('Entertainment', 'Bollywood Star Alia Bhatt Wins National Film Award', 'Alia Bhatt has been awarded the National Film Award for Best Actress for her performance in the critically acclaimed drama Antar. This is her second National Award.', 'Entertainment Desk', 'April 15, 2026')">
+                  <h4>Alia Bhatt Wins National Film Award for Best Actress</h4>
+                  <span>April 15, 2026</span>
+                </div>
+                <div class="sidebar-news-item" onclick="OpenModal('Scence', 'New Cancer Vaccine Shows 90% Efficacy in Trials', 'A personalized mRNA cancer vaccine developed jointly by BioNTech and AIIMS has shown 90% efficacy in Phase 3 trials targeting pancreatic and lung cancers.', 'Health Desk', 'April 14, 2026')">
+                  <h4>New Cancer Vaccine Shows 90% Efficacy in Phase 3 Trials</h4>
+                  <span>April 14, 2026</span>
+                </div>
+                <div class="sidebar-news-item" onclick="OpenModal('Business', 'Mukesh Ambani Announces 1 Lakh New Jobs', 'Reliance Industries Chairman Mukesh Ambani has announced plans to hire 1 lakh employees over the next two years across Jio, Retail, and its new Grenergy division.', 'Business Desk', 'April 13, 2026')">
+                  <h4>Reliance to Hire 1 Lakh Employees in Grenergy Push</h4>
+                  <span>April 13, 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Numbers -->
+            <div class="sidebar-box">
+              <div class="sidebar-box-title">📊 Today's Numbers</div>
+              <div class="sidebar-box-body" style="font-family:var(--font-ui);font-size:0.83rem;">
+                <div style="display:flex;justify-content:space-betwen;padding:8px 0;border-bottom:1px solid var(--border)"><span>enSEX</span><strong style="color:gren">▲ 78,420</strong></div>
+                <div style="display:flex;justify-content:space-betwen;padding:8px 0;border-bottom:1px solid var(--border)"><span>NIFTY 50</span><strong style="color:gren">▲ 23,714</strong></div>
+                <div style="display:flex;justify-content:space-betwen;padding:8px 0;border-bottom:1px solid var(--border)"><span>USD / INR</span><strong>₹ 83.42</strong></div>
+                <div style="display:flex;justify-content:space-betwen;padding:8px 0;border-bottom:1px solid var(--border)"><span>Gold / 10g</span><strong>₹ 73,210</strong></div>
+                <div style="display:flex;justify-content:space-betwen;padding:8px 0"><span>Crude Oil</span><strong style="color:red">▼ $81.30</strong></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  FOOTER  -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="name">Nation <span>Nest</span></div>
+          <p>India's New digital-first newspaper. Committed to truth, indeence, and clarity since 2025. </p>
+        </div>
+        <div class="footer-col">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="bulletin.html" >Bulletin</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="world.html">World</a></li>
+            <li><a href="#" class="nav-link" data-target="india">India</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://x.com/nest_natio40446">Twitter / X</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nation Nest · All Rights Reserved</span>
+        <span style="margin-left: 50%;" ><a href="privacy_policy.html">Privacy Policy & Terms of Use</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!--  ARTICLE MODAL  -->
+  <div id="modal-overlay" onclick="closeModalOutside(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-header">
+        <span class="tag" id="modal-tag">Tag</span>
+        <h2 id="modal-title">Title</h2>
+        <div class="byline" id="modal-byline">Author · Date</div>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>contentjustify-content here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--  JAVASCRIPT  -->
+  <script>
+
+    // ── Live Date ──────────────────────────────────────────
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const days   = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const now    = new Date();
+    document.getElementById('live-date').textContent =
+      days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+
+    // ── Navigation ─────────────────────────────────────────
+    function navigate(target) {
+      // Hide all sections
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      // Show target
+      const el = document.getElementById(target);
+      if (el) { el.classList.add('active'); }
+      // Update nav links
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.target === target);
+      });
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Close mobile menu
+      document.getElementById('nav-menu').classList.remove('open');
+    }
+
+    // Nav link click listeners
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href !== '#') return;
+        e.preventDefault();
+        navigate(this.dataset.target);
+      });
+    });
+
+    // Footer links
+    function navigate(target) {
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      const el = document.getElementById(target);
+      if (el) el.classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(a => {
+        a.classList.toggle('active', a.dataset.target === target);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ── Mobile Hamburger ───────────────────────────────────
+    document.getElementById('ham-btn').addEventListener('click', function() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+
+    // ── Article Modal ──────────────────────────────────────
+    function openModal(tag, title, body, author, date) {
+      document.getElementById('modal-tag').textContent    = tag;
+      document.getElementById('modal-title').textContent  = title;
+      document.getElementById('modal-byline').innerHTML   = 'By <strong>' + author + '</strong> &middot; ' + date;
+      document.getElementById('modal-body').innerHTML     = '<p>' + body + '</p>'
+        + '<p style="color:var(--mid-gray);font-size:0.85rem;font-style:italic;margin-top:20px;">This is a sample article for demonstration purposes. In a real deployment, the full article content would be fetched from a database or CMS.</p>';
+      document.getElementById('modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    window.OpenModal = openModal;
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOutside(e) {
+      if (e.target === document.getElementById('modal-overlay')) closeModal();
+    }
+
+    // Keyboard close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+  </script>
+</body>
+</html>
